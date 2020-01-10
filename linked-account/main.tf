@@ -18,8 +18,8 @@ resource "cloudability_account" "aws_account" {
 }
 
 data "cloudability_account" "aws_account" {
-    vendor_account_id = var.aws_payer_account_id
+    vendor_account_id = var.aws_account_id
     depends_on = [
-        resource.aws_iam_role.cloudability_role,
+        aws_iam_role.cloudability_role,
     ]
 }

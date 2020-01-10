@@ -13,7 +13,7 @@ resource "aws_iam_role" "cloudability_role" {
       "Effect": "Allow",
       "Condition": {
         "StringEquals": {
-          "sts:ExternalId": "${cloudability_account.aws_account.authorization.*.external_id[0]}"
+          "sts:ExternalId": "${cloudability_account.aws_account.external_id}"
         }
       }
     }

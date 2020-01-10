@@ -10,5 +10,5 @@ output "role_arn" {
 
 output "external_id" {
   description = "Cloudability AWS Account External ID"
-  value       = resource.cloudability_account.aws_account.external_id
+  value       = cloudability_account.aws_account.external_id
 }
