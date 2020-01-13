@@ -14,7 +14,7 @@ resource "cloudability_business_mapping" "cloud_service_provider" {
 
 resource "cloudability_view" "Amazon" {
     title = "Amazon"
-    filter = {
+    filter {
         # This prefix might need to be coded in the provider or sdk
         field = "category${cloudability_business_mapping.cloud_service_provider.id}"
 		comparator = "=="
@@ -24,7 +24,7 @@ resource "cloudability_view" "Amazon" {
 
 resource "cloudability_view" "Azure" {
     title = "Azure"
-    filter = {
+    filter {
         field = "category${cloudability_business_mapping.cloud_service_provider.id}"
 		comparator = "=="
 		value = "Azure"
