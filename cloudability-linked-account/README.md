@@ -10,7 +10,7 @@ Terraform 0.12
 
 ```hcl
 module "clouability_linked_account" {
-    source = "github.com/skyscrapr/terraform-cloudability-modules/linked-account"
+    source = "github.com/skyscrapr/terraform-cloudability-modules/cloudability-linked-account"
 
     aws_payer_account_id = "123456789012"
     aws_account_id = "123456789013"
