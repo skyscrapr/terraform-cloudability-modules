@@ -23,7 +23,5 @@ resource "cloudability_master_account" "aws_payer_account" {
 
 data "cloudability_account_verification" "aws_payer_account" {
     vendor_account_id = var.aws_payer_account_id
-    depends_on = [
-        module.cloudability_aws_iam_role,
-    ]
+    dependency = module.cloudability_aws_iam_role.role_id
 }
