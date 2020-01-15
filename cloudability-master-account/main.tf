@@ -3,11 +3,12 @@ provider cloudability {
 }
 
 provider "aws" {
-    region  = var.aws_region
+    region = var.aws_region
 }
 
 module "cloudability_aws_iam_role" {
-  source = "../cloudability-aws-iam-role"
+  source = "github.com/skyscrapr/terraform-cloudability-modules//cloudability-aws-iam-role"
+  # source = "../cloudability-aws-iam-role"
 
   aws_region = var.aws_region
   cloudability_account_external_id = cloudability_master_account.aws_payer_account.external_id

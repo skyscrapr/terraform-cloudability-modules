@@ -10,7 +10,7 @@ Terraform 0.12
 
 ```hcl
 module "clouability_master_account" {
-    source = "github.com/skyscrapr/terraform-cloudability-modules/cloudability-master-account"
+    source = "github.com/skyscrapr/terraform-cloudability-modules//cloudability-master-account"
 
     aws_payer_account_id = "123456789012"
     aws_region = "ap-southeast-2"

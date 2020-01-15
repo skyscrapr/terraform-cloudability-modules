@@ -7,10 +7,11 @@ provider "aws" {
 }
 
 module "cloudability_aws_iam_role" {
-  source = "../cloudability-aws-iam-role"
+    source = "github.com/skyscrapr/terraform-cloudability-modules//cloudability-aws-iam-role"
+    # source = "../cloudability-aws-iam-role"
 
-  aws_region = var.aws_region
-  cloudability_account_external_id = cloudability_linked_account.aws_account.external_id
+    aws_region = var.aws_region
+    cloudability_account_external_id = cloudability_linked_account.aws_account.external_id
 }
 
 data "cloudability_account_verification" "aws_payer_account" {
