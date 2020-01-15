@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "cloudability" {
-  bucket_prefix = "${var.aws_s3_bucket_name_prefix}${var.aws_payer_account_id}-"
+  bucket_prefix = "${var.aws_s3_bucket_name_prefix}-"
   acl    = "private"
   force_destroy = true
 #   policy = <<EOF
