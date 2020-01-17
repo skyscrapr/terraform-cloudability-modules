@@ -1,0 +1,3 @@
+[submodule "terraform-provider-cloudability"]
+	path = terraform-provider-cloudability
+	url = https://github.com/skyscrapr/terraform-provider-cloudability
