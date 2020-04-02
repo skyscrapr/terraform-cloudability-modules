@@ -1,5 +1,7 @@
+# The ony CUR endpoint currently available is in us-east-1:
+#  - https://docs.aws.amazon.com/general/latest/gr/billing.html
+#  - https://www.terraform.io/docs/providers/aws/r/cur_report_definition.html
 # Additional provider configuration for us-east-1 region
-# CUR is only supported in us-east-1
 provider "aws" {
   alias  = "us-east-1"
   region = "us-east-1"
