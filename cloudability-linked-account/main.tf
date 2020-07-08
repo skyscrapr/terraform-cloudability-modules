@@ -27,5 +27,5 @@ resource "cloudability_linked_account" "aws_account" {
 
 data "cloudability_account_verification" "aws_account" {
     vendor_account_id = var.aws_account_id
-    dependency = module.cloudability_aws_iam_role
+    dependency = module.cloudability_aws_iam_role.role_id
 }
