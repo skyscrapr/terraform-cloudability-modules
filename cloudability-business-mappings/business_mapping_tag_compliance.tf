@@ -30,7 +30,7 @@ resource "cloudability_view" "CostCenter_CostCenter1" {
     }
 }
 
-resource "cloudability_view" "CostCenter_CostCenter1" {
+resource "cloudability_view" "CostCenter_CostCenter2" {
     title = "CostCenter2"
     filter {
         # This prefix might need to be coded in the provider or sdk
