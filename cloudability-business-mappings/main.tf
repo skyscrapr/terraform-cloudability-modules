@@ -2,7 +2,7 @@ terraform {
   required_providers {
     cloudability = {
       source = "skyscrapr/cloudability"
-      version = "0.0.8"
+      version = "0.0.9"
     }
   }
 }
