@@ -22,11 +22,11 @@ resource "cloudability_view" "Amazon" {
     }
 }
 
-resource "cloudability_view" "Azure" {
-    title = "Azure"
+resource "cloudability_view" "Other1" {
+    title = "Other1"
     filter {
         field = "category${cloudability_business_mapping.cloud_service_provider.id}"
 		comparator = "=="
-		value = "Azure"
+		value = "Other1"
     }
 }
