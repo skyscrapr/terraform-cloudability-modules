@@ -78,8 +78,7 @@ resource "aws_iam_policy" "cloudability_monitor_resources_policy" {
         "redshift:DescribeClusters",
         "redshift:DescribeReservedNodes",
         "redshift:DescribeTags",
-        "savingsplans:DescribeSavingsPlans",
-        "ce:GetSavingsPlansPurchaseRecommendation"
+        "savingsplans:DescribeSavingsPlans"
       ],
       "Resource": "*"
     }
