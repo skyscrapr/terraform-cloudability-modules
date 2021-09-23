@@ -35,10 +35,6 @@ resource "cloudability_business_mapping" "cost_center" {
         value_expression = "'CostCenter8'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter9'"
-        value_expression = "'CostCenter9'"
-    }
-    statement {
         match_expression = "EXISTS TAG['CostCenter']"
         value_expression = "'Invalid CostCenter Tag'"
     }
@@ -106,13 +102,5 @@ resource "cloudability_view" "CostCenter_CostCenter8" {
         field = "category${cloudability_business_mapping.cost_center.id}"
 		comparator = "=="
 		value = "CostCenter8"
-    }
-}
-resource "cloudability_view" "CostCenter_CostCenter9" {
-    title = "CostCenter9"
-    filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
-		comparator = "=="
-		value = "CostCenter9"
     }
 }
