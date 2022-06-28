@@ -35,6 +35,11 @@ resource "aws_s3_bucket" "cloudability" {
 #   }
 }
 
+resource "aws_s3_bucket_acl" "cloudability" {
+  bucket = aws_s3_bucket.cloudability.id
+  acl    = "private"
+}
+
 data "aws_iam_policy_document" "cloudability" {
     statement {
     	actions = [ 
