@@ -1,106 +1,106 @@
-resource "cloudability_business_mapping" "cost_center" {
-    name = "CostCenter"
+resource "cloudability_business_mapping" "cost_code" {
+    name = "CostCode"
     default_value = "Unknown"
     kind = "BUSINESS_DIMENSION"
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter1'"
-        value_expression = "'CostCenter1'"
+        match_expression = "TAG['CostCode'] == 'CostCode2'"
+        value_expression = "'CostCode1'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter2'"
-        value_expression = "'CostCenter2'"
+        match_expression = "TAG['CostCode'] == 'CostCode2'"
+        value_expression = "'CostCode2'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter3'"
-        value_expression = "'CostCenter3'"
+        match_expression = "TAG['CostCode'] == 'CostCode3'"
+        value_expression = "'CostCode3'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter4'"
-        value_expression = "'CostCenter4'"
+        match_expression = "TAG['CostCode'] == 'CostCode4'"
+        value_expression = "'CostCode4'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter5'"
-        value_expression = "'CostCenter5'"
+        match_expression = "TAG['CostCode'] == 'CostCode5'"
+        value_expression = "'CostCode5'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter6'"
-        value_expression = "'CostCenter6'"
+        match_expression = "TAG['CostCode'] == 'CostCode6'"
+        value_expression = "'CostCode6'"
     }
         statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter7'"
-        value_expression = "'CostCenter7'"
+        match_expression = "TAG['CostCode'] == 'CostCode7'"
+        value_expression = "'CostCode7'"
     }
     statement {
-        match_expression = "TAG['CostCenter'] == 'CostCenter8'"
-        value_expression = "'CostCenter8'"
+        match_expression = "TAG['CostCode'] == 'CostCode8'"
+        value_expression = "'CostCode8'"
     }
     statement {
-        match_expression = "EXISTS TAG['CostCenter']"
-        value_expression = "'Invalid CostCenter Tag'"
+        match_expression = "EXISTS TAG['CostCode']"
+        value_expression = "'Invalid CostCode Tag'"
     }
 }
 
-resource "cloudability_view" "CostCenter_CostCenter1" {
-    title = "CostCenter1"
+resource "cloudability_view" "CostCode_CostCode1" {
+    title = "CostCode1"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter1"
+		value = "CostCode1"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter2" {
-    title = "CostCenter2"
+resource "cloudability_view" "CostCode_CostCode2" {
+    title = "CostCode2"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter2"
+		value = "CostCode2"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter3" {
-    title = "CostCenter3"
+resource "cloudability_view" "CostCode_CostCode3" {
+    title = "CostCode3"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter3"
+		value = "CostCode3"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter4" {
-    title = "CostCenter4"
+resource "cloudability_view" "CostCode_CostCode4" {
+    title = "CostCode4"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter4"
+		value = "CostCode4"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter5" {
-    title = "CostCenter5"
+resource "cloudability_view" "CostCode_CostCode5" {
+    title = "CostCode5"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter5"
+		value = "CostCode5"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter6" {
-    title = "CostCenter6"
+resource "cloudability_view" "CostCode_CostCode6" {
+    title = "CostCode6"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter6"
+		value = "CostCode6"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter7" {
-    title = "CostCenter7"
+resource "cloudability_view" "CostCode_CostCode7" {
+    title = "CostCode7"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter7"
+		value = "CostCode7"
     }
 }
-resource "cloudability_view" "CostCenter_CostCenter8" {
-    title = "CostCenter8"
+resource "cloudability_view" "CostCode_CostCode8" {
+    title = "CostCode8"
     filter {
-        field = "category${cloudability_business_mapping.cost_center.id}"
+        field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
-		value = "CostCenter8"
+		value = "CostCode8"
     }
 }
