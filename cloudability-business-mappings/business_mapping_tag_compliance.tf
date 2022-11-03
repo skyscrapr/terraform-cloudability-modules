@@ -27,6 +27,10 @@ resource "cloudability_business_mapping" "cost_code" {
         value_expression = "'CostCode6'"
     }
     statement {
+        match_expression = "TAG['CostCode'] == 'CostCode6'"
+        value_expression = "'CostCode7'"
+    }
+    statement {
         match_expression = "EXISTS TAG['CostCode']"
         value_expression = "'Invalid CostCode Tag'"
     }
@@ -78,6 +82,14 @@ resource "cloudability_view" "CostCode_CostCode6" {
         field = "category${cloudability_business_mapping.cost_code.id}"
 		comparator = "=="
 		value = "CostCode6"
+    }
+}
+resource "cloudability_view" "CostCode_CostCode6" {
+    title = "CostCode7"
+    filter {
+        field = "category${cloudability_business_mapping.cost_code.id}"
+		comparator = "=="
+		value = "CostCode7"
     }
 }
 
