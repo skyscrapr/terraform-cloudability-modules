@@ -84,7 +84,7 @@ resource "cloudability_view" "CostCode_CostCode6" {
 		value = "CostCode6"
     }
 }
-resource "cloudability_view" "CostCode_CostCode6" {
+resource "cloudability_view" "CostCode_CostCode7" {
     title = "CostCode7"
     filter {
         field = "category${cloudability_business_mapping.cost_code.id}"
