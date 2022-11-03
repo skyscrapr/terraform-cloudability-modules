@@ -9,8 +9,7 @@ resource "aws_iam_policy" "cloudability_master_payer_policy" {
       "Effect": "Allow",
       "Action": [
         "s3:ListBucket",
-        "s3:GetObject",
-        "s3:PutObject"
+        "s3:GetObject"
       ],
       "Resource": [
         "${aws_s3_bucket.cloudability.arn}",
