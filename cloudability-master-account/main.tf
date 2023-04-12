@@ -2,7 +2,7 @@ terraform {
   required_providers {
     cloudability = {
       source = "skyscrapr/cloudability"
-      version = "0.0.10"
+      version = "0.0.15"
     }
   }
 }
@@ -27,6 +27,10 @@ resource "cloudability_master_account" "aws_payer_account" {
     bucket_name = aws_s3_bucket.cloudability.bucket
     report_name = "Cloudability"
     report_prefix = "CostAndUsageReports"
+
+    timeouts {
+      create = "1m"
+    }
 }
 
 data "cloudability_account_verification" "aws_payer_account" {
