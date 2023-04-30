@@ -3,7 +3,7 @@ resource "cloudability_business_mapping" "cost_code" {
     default_value = "Unknown"
     kind = "BUSINESS_DIMENSION"
     statement {
-        match_expression = "TAG['CostCode'] == 'CostCode2'"
+        match_expression = "TAG['CostCode'] == 'CostCode1'"
         value_expression = "'CostCode1'"
     }
     statement {
